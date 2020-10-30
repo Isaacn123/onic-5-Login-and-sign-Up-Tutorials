@@ -1,0 +1,123 @@
+ion-header{
+  position: absolute;
+}
+
+ion-toolbar{
+  --ion-background-color: transparent;
+  --opacity: 0;
+}
+
+ion-content{
+  --ion-background-color:#E1EAF9 !important;
+}
+
+.wrapform{
+  margin-top: 15px;
+}
+.error_message{
+  font-size: 6px;
+  color: red;
+}
+ion-item {
+    color:#647B9D;
+  --border-color: #D4D7DB;
+  --highlight-color-focused:#1248A0;
+  --padding-start:0;
+  --inner-padding-end:0;
+
+
+    font-size: 12px;
+     // --color-focused:#1248A0 !important;
+     ion-input{
+       color:#647B9D;
+
+     }
+    ion-icon{
+      padding-right: 6px;
+      font-size: 18px;
+    }
+
+    ion-input:hover{
+      color: #1248A0;
+    }
+
+
+}
+
+
+
+.password_forgot{
+  text-align: right;
+  // color:#0A4296
+  ion-button{
+    font-size: 12px;
+    color: #0A4296;
+  }
+}
+
+.sign-btn-wrap{
+   text-align: center;
+   padding-top: 20px;
+  .sign-btn{
+    --ion-primary-color:#215AB7;
+    --background-activated:#E1EAF9;
+    --background-focused:#E1EAF9;
+    --background-hover:#647B9D;
+    color:#F4F6FA;
+    border-radius: 25px;
+    --background:#215AB7;
+    background-color: #215AB7;
+  }
+}
+
+.text-tag{
+  margin-top: 30px;
+  text-align: center;
+  span{
+    font-size: 13px;
+    font-weight: normal;
+    color:#898585;
+  }
+}
+
+.social-btns{
+  margin-top: 25px;
+  text-align: center;
+  ion-button{
+    width:40px;
+    padding-left: 5px !important;
+  }
+}
+
+ion-card{
+  --ion-background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.ion-card-footer{
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  span{
+  color: #85888D;
+  font-size: 12px;
+  font-weight: 200;
+
+  }
+
+  button{
+     background-color: transparent;
+     font-size: 14px;
+     font-weight: 600;
+     padding-left: 3px;
+     color: #535558;
+
+  }
+
+  button:hover{
+    color: #969393;
+  }
+}

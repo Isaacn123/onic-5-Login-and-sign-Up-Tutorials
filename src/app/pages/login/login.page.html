@@ -1,0 +1,49 @@
+<ion-header  class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>login</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card class="ion-no-margin">
+  <ion-img src="assets/images/header.png"></ion-img>
+  <ion-card-header>
+  <ion-card-title>
+     Welcome
+  </ion-card-title>
+  <ion-card-subtitle class="ion-text-lowercase">
+    This app is a social media platform for
+    artists — and it’s all about visuals
+  </ion-card-subtitle>
+
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class="signin-btns">
+        <ion-button  size="small" fill="solid" shape="round" class="loginbtn" (click)="gotoLoginpage()">
+       Login
+        </ion-button>
+        <ion-button  size="small" fill="outline" shape="round" color="dark" >Sign Up</ion-button>
+      </div>
+      <div class="text-tag">
+      <span>Or via Social Media</span>
+      </div>
+
+      <div class="social-btns">
+          <ion-button fill="clear"  class="facebookbtn ion-no-padding">
+        <ion-img src="assets/images/facebook.png"></ion-img>
+          </ion-button>
+          <ion-button fill="clear"  class="googlebtn ion-no-padding">
+        <ion-img src="assets/images/google.png"></ion-img>
+          </ion-button>
+          <ion-button fill="clear"  class="applebtn ion-no-padding">
+        <ion-img src="assets/images/apple.png"></ion-img>
+          </ion-button>
+
+        </div>
+  </ion-card-content>
+
+</ion-card>
+
+</ion-content>
