@@ -12,27 +12,42 @@
       <ion-img src="assets/images/header1.png"></ion-img>
       <ion-card-content>
 
-
+    <form [formGroup]="validationFormUser" (ngSubmit)="LoginUser(validationFormUser.value)">
         <div class="wrapform">
          <ion-item>
-            <ion-input type="text" name="email"  placeholder="Email">
+            <ion-input type="text" name="email" formControlName="email"  placeholder="Email">
            <ion-icon name="mail-outline"></ion-icon>
            </ion-input>
            </ion-item>
+           <div>
+               <ng-container *ngFor="let validation of validationUserMessage.email">
+                     <div class="error_message" *ngIf="validationFormUser.get('email').hasError(validation.type) && (validationFormUser.get('email').dirty || validationFormUser.get('email').touched)">
+                        {{validation.message}}
+                     </div>
+               </ng-container>
+           </div>
 
            <ion-item>
 
-             <ion-input type="password" name="password"  placeholder="**************" >
+             <ion-input type="password" name="password" formControlName="password"  placeholder="**************" >
              <ion-icon name="lock-closed"></ion-icon>
              </ion-input>
              </ion-item>
+
+             <div>
+                 <ng-container *ngFor="let validation of validationUserMessage.password">
+                      <div class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
+                         {{validation.message}}
+                      </div>
+                  </ng-container>
+             </div>
 
         </div>
          <div class="password_forgot">
             <ion-button fill="clear" class="ion-no-padding">ForgotPasword?</ion-button>
          </div>
          <div class="sign-btn-wrap">
-            <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn" >Login</ion-button>
+            <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn" [disabled]="!validationFormUser.valid" >Login</ion-button>
            </div>
 
            <div class="text-tag">
@@ -54,7 +69,7 @@
 
 
 
-
+      </form>
       </ion-card-content>
 
 

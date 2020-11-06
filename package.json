@@ -15,6 +15,7 @@
   "dependencies": {
     "@angular/common": "~10.0.0",
     "@angular/core": "~10.0.0",
+    "@angular/fire": "^6.0.4",
     "@angular/forms": "~10.0.0",
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
@@ -27,6 +28,7 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "@ionic/lab": "^3.2.9",
+    "firebase": "^8.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
