@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import {AuthGuard} from 'src/app/guards/auth.guard'
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-  }, 
+  },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
+
   },
   {
     path: 'forgotpassword',
     loadChildren: () => import('./pages/forgotpassword/forgotpassword.module').then( m => m.ForgotpasswordPageModule)
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'loginscreen',
@@ -27,6 +24,17 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: () => import('./pages/signup/signup.module').then( m => m.SignupPageModule)
   },
+
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'uploadimage',
+    loadChildren: () => import('./pages/uploadimage/uploadimage.module').then( m => m.UploadimagePageModule)
+  }
+
 ];
 
 @NgModule({

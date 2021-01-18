@@ -1,6 +1,6 @@
 ion-content{
   --ion-background-color: transparent;
-
+  --ion-item-background: transparent !important;
 }
 
 .bg-color{
@@ -19,6 +19,7 @@ ion-toolbar{
 ion-card{
   --ion-background-color:transparent;
     box-shadow: none !important;
+    background-color: transparent !important;
 }
 
  ion-card-title{
@@ -45,10 +46,14 @@ ion-card-content{
 }
  ion-item{
    color:#74787E;
-   --border-color:#D4D7DB;
+    --border-color:#D4D7DB;
+
    --highlight-color-focused:#215AB7;
    --padding-start:0;
    --inner-padding-end:0;
+   --highlight-color-invalid: #215AB7;
+   --highlight-color-valid: #215AB7;
+   
    font-size: 13px;
    ion-input{
      color:#74787E;
@@ -61,7 +66,10 @@ ion-card-content{
 
    ion-input:hover{
      color:#215AB7;
+
    }
+
+
 
  }
 
@@ -98,4 +106,10 @@ ion-card-content{
      width:30px;
      padding-left: 5px !important;
    }
+ }
+
+ .error_message{
+   font-size: 6px;
+   font-weight:200;
+   color: #913e07;
  }

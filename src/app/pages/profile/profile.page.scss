@@ -1,0 +1,70 @@
+
+ion-content{
+    --ion-background-color:#3e6777;
+}
+
+
+ion-header{
+     position: absolute;
+     --ion-background-color:#3e6777;
+}
+
+
+ion-toolbar{
+ --ion-background-color:#3e6777; 
+ --opacity:0;
+}
+ion-title{
+    font-size: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    color:#fff;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #232641;
+}
+
+.overylay{
+    position: relative;
+    text-align: center;
+    top:60%;
+}
+
+ ion-avatar{
+     height: 100px;
+     width: 100px;
+     margin: auto;
+     border:  4px solid  #6e621a;
+ }
+
+ ion-card{
+     margin-top: 40px;
+     --ion-background-color: transparent !important;
+      box-shadow: none;
+      text-align: center;
+ }
+
+ ion-item{
+     --ion-item-background: #536c77;
+     text-align: center;
+     color:#c2c3c4;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-style: italic;
+     font-weight: 400;
+     font-size: 15px;
+     border-radius: 5px;
+     height: 35px;
+     --min-height:35px;
+     margin-bottom: 15px;
+ }
+
+ ion-label{
+     text-align: center;
+     padding: 0px;
+     margin: 0px;
+ }

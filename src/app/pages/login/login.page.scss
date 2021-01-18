@@ -8,6 +8,13 @@ ion-toolbar{
   --opacity:0;
 }
 
+ion-card{
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+
+
 ion-card-title{
   margin-top: 30px;
   font-size: 20px;

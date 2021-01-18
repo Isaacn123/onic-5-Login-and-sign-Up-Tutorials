@@ -9,6 +9,7 @@ ion-toolbar{
 
 ion-content{
   --ion-background-color:#E1EAF9 !important;
+  --ion-item-background: transparent !important;
 }
 
 .wrapform{
@@ -24,6 +25,7 @@ ion-item {
   --highlight-color-focused:#1248A0;
   --padding-start:0;
   --inner-padding-end:0;
+  
 
 
     font-size: 12px;
@@ -91,7 +93,8 @@ ion-item {
 
 ion-card{
   --ion-background-color: transparent !important;
-  box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
 .ion-card-footer{

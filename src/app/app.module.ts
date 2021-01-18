@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
@@ -12,8 +11,11 @@ import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {firebaseConfig} from 'src/environments/environment';
-
+import {firebaseConfig} from '../environments/environment';
+import { Facebook } from '@ionic-native/facebook/ngx';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { LottieSplashScreen } from '@ionic-native/lottie-splash-screen/ngx';
+import { AppPreferences } from '@ionic-native/app-preferences/ngx';
 
 
 @NgModule({
@@ -32,8 +34,11 @@ import {firebaseConfig} from 'src/environments/environment';
 
   providers: [
     StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    LottieSplashScreen,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Facebook,
+    GooglePlus ,
+    AppPreferences
   ],
   bootstrap: [AppComponent]
 })

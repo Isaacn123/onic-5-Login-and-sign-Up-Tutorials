@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<ion-content>
+
+  <div class="containerWrap">
+
+   <ion-button expand="full" *ngIf="!isLoading  && !isLoaded" class="ion-text-center">
+     <ion-icon slot="start" lazy="true" name="image"></ion-icon>
+     <input type="file" (change)="uploadImagetoFirebase($event)" id="file-input"  accept="image/png, image/jpg">
+   </ion-button>
+
+    <ion-card *ngIf="isLoading && !isLoaded">
+      <ion-card-content *ngIf="percentage | async as percent" class="ion-text-center">
+       Progress: {{percent |  number}}%
+       <ion-progress-bar value="{{percent / 100}}"></ion-progress-bar>
+         <button class="btn" (click)="goToNextPage()" style="">Continue</button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

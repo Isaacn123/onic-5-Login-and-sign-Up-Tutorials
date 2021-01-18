@@ -15,20 +15,26 @@
   "dependencies": {
     "@angular/common": "~10.0.0",
     "@angular/core": "~10.0.0",
-    "@angular/fire": "^6.0.4",
+    "@angular/fire": "^6.0.2",
     "@angular/forms": "~10.0.0",
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "@capacitor/android": "^2.4.2",
     "@capacitor/cli": "^2.4.2",
     "@capacitor/core": "^2.4.2",
     "@capacitor/ios": "^2.4.2",
+    "@ionic-native/app-preferences": "^5.30.0",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/facebook": "^5.30.0",
+    "@ionic-native/google-plus": "^5.30.0",
+    "@ionic-native/lottie-splash-screen": "^5.30.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "@ionic/lab": "^3.2.9",
-    "firebase": "^8.0.0",
+    "add": "^2.0.6",
+    "firebase": "^7.24.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
@@ -40,10 +46,21 @@
     "@angular/compiler-cli": "~10.0.0",
     "@angular/language-service": "~10.0.0",
     "@ionic/angular-toolkit": "^2.3.0",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "cordova-android": "^9.0.0",
+    "cordova-plugin-app-preferences": "^0.99.3",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-facebook4": "^6.4.0",
+    "cordova-plugin-googleplus": "^8.5.1",
+    "cordova-plugin-ionic-keyboard": "^2.2.0",
+    "cordova-plugin-ionic-webview": "^4.2.1",
+    "cordova-plugin-lottie-splashscreen": "^0.9.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -56,5 +73,30 @@
     "tslint": "~6.1.0",
     "typescript": "~3.9.5"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-facebook4": {
+        "APP_ID": "123498866064283",
+        "APP_NAME": "Ionic 5 Login Tutorials",
+        "FACEBOOK_HYBRID_APP_EVENTS": "false",
+        "FACEBOOK_ANDROID_SDK_VERSION": "5.13.0"
+      },
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "com.googleusercontent.apps.206201421419-9qbjdo1n40lf60d37ppko4a9tgp972ln"
+      },
+      "cordova-plugin-lottie-splashscreen": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }
